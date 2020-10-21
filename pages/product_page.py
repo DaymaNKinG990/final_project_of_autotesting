@@ -14,7 +14,7 @@ class ProductPage(BasePage):
         assert self.is_element_present(*ProductPageLocators.BTN_ADD_TO_BASKET), 'Button not found'
 
     def item_added_to_basket(self):
-        assert self.browser.find_element(*ProductPageLocators.NAME_OF_BOOK).text in self.browser.find_element(*ProductPageLocators.ITEM_ADDED).text
+        assert self.browser.find_element(*ProductPageLocators.NAME_OF_BOOK).text == self.browser.find_element(*ProductPageLocators.ITEM_ADDED).text
 
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert

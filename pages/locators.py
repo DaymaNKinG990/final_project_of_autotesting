@@ -23,5 +23,5 @@ class LoginPageLocators():
 
 class ProductPageLocators():
     BTN_ADD_TO_BASKET = (By.CSS_SELECTOR, 'button.btn.btn-lg.btn-primary.btn-add-to-basket')
-    ITEM_ADDED = (By.CSS_SELECTOR, 'div.alertinner')
+    ITEM_ADDED = (By.CSS_SELECTOR, 'div.alertinner > strong')
     NAME_OF_BOOK = (By.CSS_SELECTOR, 'div.col-sm-6.product_main > h1')
