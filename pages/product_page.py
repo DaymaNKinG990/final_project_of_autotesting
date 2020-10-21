@@ -14,7 +14,8 @@ class ProductPage(BasePage):
         assert self.is_element_present(*ProductPageLocators.BTN_ADD_TO_BASKET), 'Button not found'
 
     def item_added_to_basket(self):
-        assert self.browser.find_element(*ProductPageLocators.NAME_OF_BOOK).text == self.browser.find_element(*ProductPageLocators.ITEM_ADDED).text
+        assert self.browser.find_element(*ProductPageLocators.NAME_OF_BOOK).text == self.browser.find_element(
+            *ProductPageLocators.ITEM_ADDED).text
 
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert
@@ -29,3 +30,11 @@ class ProductPage(BasePage):
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.ITEM_ADDED), \
+            "Success message is presented, but should not be"
+
+    def should_be_disappear(self):
+        assert self.is_disappeared(*ProductPageLocators.ITEM_ADDED), \
+            "Success message is disappeared, but should not be"
