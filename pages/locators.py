@@ -5,11 +5,7 @@ class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     BASKET_LINK = (By.CSS_SELECTOR, ".basket-mini.pull-right.hidden-xs > span > a")
-
-
-class MainPageLocators:
-    # Login url
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 
 class LoginPageLocators:
@@ -25,7 +21,6 @@ class LoginPageLocators:
     PASS_SING_UP_1 = (By.CSS_SELECTOR, 'input#id_registration-password1.form-control')
     PASS_SING_UP_2 = (By.CSS_SELECTOR, 'input#id_registration-password2.form-control')
     BTN_SING_UP = (By.CSS_SELECTOR, 'form#register_form > button.btn.btn-lg.btn-primary')
-
 
 class ProductPageLocators:
     BTN_ADD_TO_BASKET = (By.CSS_SELECTOR, 'button.btn.btn-lg.btn-primary.btn-add-to-basket')
