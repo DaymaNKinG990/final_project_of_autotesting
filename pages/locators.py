@@ -22,6 +22,7 @@ class LoginPageLocators:
     PASS_SING_UP_2 = (By.CSS_SELECTOR, 'input#id_registration-password2.form-control')
     BTN_SING_UP = (By.CSS_SELECTOR, 'form#register_form > button.btn.btn-lg.btn-primary')
 
+
 class ProductPageLocators:
     BTN_ADD_TO_BASKET = (By.CSS_SELECTOR, 'button.btn.btn-lg.btn-primary.btn-add-to-basket')
     ITEM_ADDED = (By.CSS_SELECTOR, 'div.alertinner > strong')
